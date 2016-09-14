@@ -1,0 +1,10 @@
+name: setup
+image: ubuntu-16-04-x64
+min_size: 512mb
+config:
+  packages:
+    - git
+    - transmission-daemon
+    - nginx
+  runcmd:
+    - git clone git://github.com/kuyapp/setup.git && cd setup && bash setup.sh
