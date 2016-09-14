@@ -6,3 +6,7 @@ mv /var/lib/transmission-daemon/info/settings.json /var/lib/transmission-daemon/
 cp ./settings.json /var/lib/transmission-daemon/info/settings.json
 usermod -a -G debian-transmission root
 service transmission-daemon start
+
+sed -i 's/try_files $uri $uri\/ =404;/autoindex on;/' /etc/nginx/sites-enabled/default
+rm /var/www/html/*
+service nginx restart
