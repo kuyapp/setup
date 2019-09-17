@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-sleep 10
 add-apt-repository -y ppa:transmissionbt/ppa
 apt-get -y update
 apt-get -y install transmission-cli transmission-common transmission-daemon nginx
