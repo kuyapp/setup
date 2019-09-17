@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+wget https://raw.githubusercontent.com/kuyapp/setup/master/settings.json
 add-apt-repository -y ppa:transmissionbt/ppa
 apt-get -y update
 apt-get -y install transmission-cli transmission-common transmission-daemon nginx
